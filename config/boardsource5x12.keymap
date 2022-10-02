@@ -1,5 +1,5 @@
 
-  /*
+    /*
   * Copyright (c) 2020 The ZMK Contributors
   *
   * SPDX-License-Identifier: MIT
@@ -19,6 +19,7 @@
           &kp A &mt LEFT_CONTROL S &mt LEFT_ALT D LGUI(KC_F) &kp G &kp ESCAPE KC_COLN &kp H &mt LEFT_GUI J &mt LEFT_ALT K &mt LEFT_CONTROL L &kp SEMICOLON
           &kp Z &kp X &kp C &kp V &kp B &kp TAB &kp SINGLE_QUOTE &kp N &kp M &kp COMMA &kp DOT &kp SLASH 
           &none &none &none &kp BACKSPACE &kp LEFT_SHIFT &mo 4 &mo 1 &kp ENTER &kp SPACE &none &none &none
+          &none &none &none &none &none &none &none &none &none &none &none &none
           >;
         };
   layer1 {
@@ -27,6 +28,7 @@
           KC_DLR KC_PLUS KC_LPRN KC_RPRN KC_AT &none &none KC_PIPE &kp MINUS &kp EQUAL KC_UNDS KC_ASTR 
           KC_EXLM KC_HASH KC_LCBR KC_RCBR KC_TILD &none &none KC_AMPR &kp LEFT_BRACKET &kp RIGHT_BRACKET KC_PERC KC_CIRC 
           &none &none &none &none &kp DELETE &mo 2 &none &none &none &none &none &none
+          &none &none &none &none &none &none &none &none &none &none &none &none
           >;
         };
   layer2 {
@@ -34,6 +36,7 @@
           &none &none &none &none &none &none &none &none &kp N7 &kp N8 &kp N9 &none 
           &none &none &none &none &none &none &none &kp N0 &kp N4 &kp N5 &kp N6 &kp DOT 
           &none &none &none &none &none &none &none &none &kp N1 &kp N2 &kp N3 &none 
+          &none &none &none &none &none &none &none &none &none &none &none &none
           &none &none &none &none &none &none &none &none &none &none &none &none
           >;
         };
@@ -43,6 +46,7 @@
           &kp LEFT_SHIFT &kp A &kp S &kp D &kp F &kp TAB &none &none &none &none &none &none 
           &kp LEFT_CONTROL &kp Z &kp X &kp C &kp V &kp B &none &none &none &none &none &none 
           &none &none &none &kp SPACE OSL(6) LALT(KC_NO) &none &none &none &none &none &none
+          &none &none &none &none &none &none &none &none &none &none &none &none
           >;
         };
   layer4 {
@@ -50,6 +54,7 @@
           &none &none &none &none &none &none &none &none LCTL(KC_LEFT) &kp HOME &kp END LCTL(KC_RGHT) &none 
           &none &none &none &none &none &none LCTL(KC_UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT 
           &none &none &none &none &none &none &none &none LAG(KC_LEFT) LAG(KC_DOWN) LAG(KC_UP) LAG(KC_RGHT) 
+          &none &none &none &none &none &none &none &none &none &none &none &none
           &none &none &none &none &none &none &none &none &none &none &none &none
           >;
         };
@@ -59,6 +64,7 @@
           &none &none &none &none &none &none &none &none &none &none &none &none 
           &none &none &none &none &none &none &none &none &none &none &none &none 
           &none &none &none &none &none &none &none &none &none &none &none &none
+          &none &none &none &none &none &none &none &none &none &none &none &none
           >;
         };
   layer6 {
@@ -66,6 +72,7 @@
           &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &none &none &none &none &none &none &none 
           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none &none &none &none &none &none &none 
           &none &none &none &none &none &none &none &none &none &none &none &none 
+          &none &none &none &none &none &none &none &none &none &none &none &none
           &none &none &none &none &none &none &none &none &none &none &none &none
           >;
         };
