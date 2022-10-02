@@ -70,8 +70,8 @@
             bindings = <
                 &kp LC(LEFT) &none &none &none &none &none &none &none &none &none &none &none
                 &kp HOME &none &none &none &none &none &none &none &none &none &none &none
-                &kp LA(LG(LEFT) &none &none &none &none &none &none &none &none &none &none &none
                 &kp LALT(LGUI(LEFT) &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
         };
