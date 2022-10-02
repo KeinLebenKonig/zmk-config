@@ -68,8 +68,8 @@
 
         layer4 {
             bindings = <
-                &none &none &none &none &none &none &none &none &kp LCTRL(LEFT) &kp HOME &kp END &kp LCTRL(RGHT) &none 
-                &none &none &none &none &none &none &kp LCTRL(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT 
+                &none &none &none &none &none &none &none &none &kp LCTRL(LEFT) &kp HOME &kp END &kp LCTRL(RGHT)
+                &none &none &none &none &none &none &none &kp LCTRL(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT 
                 &none &none &none &none &none &none &none &none &kp LALT(LGUI(LEFT) &kp LALT(LGUI(DOWN) &kp LALT(LGUI(UP) &kp LALT(LGUI(RGHT) 
                 &none &none &none &none &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
