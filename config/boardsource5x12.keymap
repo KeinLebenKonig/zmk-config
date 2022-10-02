@@ -70,7 +70,7 @@
             bindings = <
                 &none &none &none &none &none &none &none &none &kp LC(LEFT) &kp HOME &kp END &kp LC(RIGHT)
                 &none &none &none &none &none &none &none &kp LC(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &none &none &none &none &none &none &none &none &kp LA(LG(LEFT)) &kp LA(LG(DOWN)) &none &none
+                &none &none &none &none &none &none &none &none &kp LA(LG(LEFT)) &kp LA(LG(DOWN)) &kp LA(LG(UP)) &none
                 &none &none &none &trans &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
