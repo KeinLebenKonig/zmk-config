@@ -68,9 +68,9 @@
 
         layer4 {
             bindings = <
-                &none &none &none &none &none &none &none &none &kp LCTRL(LEFT) &kp HOME &kp END &kp LC(RGHT)
-                &none &none &none &none &none &none &none &kp LC(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &none &none &none &none &none &none &none &none &kp LA(LG(LEFT)) &kp LA(LG(DOWN)) &kp LA(LG(UP)) &kp LA(LG(RGHT))
+                &none &none &none &none &none &none &none &none &kp LC(LEFT_ARROW) &kp HOME &kp END &kp LC(RGHT_ARROW)
+                &none &none &none &none &none &none &none &kp LC(UP_ARROW) &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                &none &none &none &none &none &none &none &none &kp LA(LG(LEFT_ARROW)) &kp LA(LG(DOWN_ARROW)) &kp LA(LG(UP_ARROW)) &kp LA(LG(RGHT_ARROW))
                 &none &none &none &trans &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
