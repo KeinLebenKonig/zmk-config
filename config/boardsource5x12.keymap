@@ -39,8 +39,8 @@
         layer1 {
             bindings = <
                 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &none &none &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
-                KC_DLR KC_PLUS KC_LPRN KC_RPRN KC_AT &none &none KC_PIPE &kp MINUS &kp EQUAL KC_UNDS KC_ASTR 
-                KC_EXLM KC_HASH KC_LCBR KC_RCBR KC_TILD &none &none KC_AMPR &kp LEFT_BRACKET &kp RIGHT_BRACKET KC_PERC KC_CIRC 
+                &kp DOLLAR &kp PLUS &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp AT_SIGN &none &none &kp PIPE &kp MINUS &kp EQUAL &kp UNDERSCORE &kp ASTERISK
+                &kp EXCL &kp HASH &kp LEFT_BRACE &kp RIGHT_BRACE &kp TILDE &none &none &kp AMPERSAND &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PERCENT &kp CARET 
                 &none &none &none &none &kp DELETE &mo 2 &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
@@ -61,16 +61,16 @@
                 &kp ESCAPE &kp Q &kp W &kp E &kp R &none &none &none &none &none &none &none 
                 &kp LEFT_SHIFT &kp A &kp S &kp D &kp F &kp TAB &none &none &none &none &none &none 
                 &kp LEFT_CONTROL &kp Z &kp X &kp C &kp V &kp B &none &none &none &none &none &none 
-                &none &none &none &kp SPACE OSL(6) LALT(KC_NO) &none &none &none &none &none &none
+                &none &none &none &kp SPACE OSL(6) LALT(&kp NO) &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
         };
 
         layer4 {
             bindings = <
-                &none &none &none &none &none &none &none &none LCTL(KC_LEFT) &kp HOME &kp END LCTL(KC_RGHT) &none 
-                &none &none &none &none &none &none LCTL(KC_UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT 
-                &none &none &none &none &none &none &none &none LAG(KC_LEFT) LAG(KC_DOWN) LAG(KC_UP) LAG(KC_RGHT) 
+                &none &none &none &none &none &none &none &none LCTL(&kp LEFT) &kp HOME &kp END LCTL(&kp RGHT) &none 
+                &none &none &none &none &none &none LCTL(&kp UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT 
+                &none &none &none &none &none &none &none &none LAG(&kp LEFT) LAG(&kp DOWN) LAG(&kp UP) LAG(&kp RGHT) 
                 &none &none &none &none &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
