@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (c) 2021 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -69,10 +69,9 @@
 
         layer4 {
             bindings = <
-                &kp LC(LEFT) &none &none &none &none &none &none &none &none &none &none &none
-                &kp HOME &none &none &none &none &none &none &none &none &none &none &none
-                &kp LA(LG(LEFT)) &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &trans &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &kp LC(LEFT) &kp HOME &kp END &kp LC(RGHT)
+                &none &none &none &none &none &none &none &kp LC(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT 
+                &none &none &none &none &none &none &none &none &kp LA(LG(LEFT)) &kp LA(LG(DOWN)) &kp LA(LG(UP)) &kp LA(LG(RGHT)) 
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
         };
