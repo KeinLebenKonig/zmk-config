@@ -61,15 +61,15 @@
                 &kp ESCAPE &kp Q &kp W &kp E &kp R &tog 1 &none &none &none &none &none &none 
                 &kp LEFT_SHIFT &kp A &kp S &kp D &kp F &kp TAB &none &none &none &none &none &none 
                 &kp LEFT_CONTROL &kp Z &kp X &kp C &kp V &kp B &none &none &none &none &none &none 
-                &none &none &none &sl 6 &kp SPACE &kp LALT(TAB) &none &none &none &none &none &none
+                &none &none &none &sl 6 &kp SPACE &kp LA(TAB) &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
         };
 
         layer4 {
             bindings = <
-                &none &none &none &none &none &none &none &none &kp LCTRL(LEFT) &kp HOME &kp END &kp LCTRL(RGHT)
-                &none &none &none &none &none &none &none &kp LCTRL(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT 
+                &none &none &none &none &none &none &none &none &kp LC(LEFT) &kp HOME &kp END &kp LC(RGHT)
+                &none &none &none &none &none &none &none &kp LC(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT 
                 &none &none &none &none &none &none &none &none &kp LA(LG(LEFT)) &kp LA(LG(DOWN)) &kp LA(LG(UP)) &kp LA(LG(RGHT)) 
                 &none &none &none &trans &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
