@@ -68,10 +68,10 @@
 
         layer4 {
             bindings = <
-                &none &none &none &none &none &none &none &none &kp LC(LEFT) &kp HOME &kp END &kp LC(RGHT)
-                &none &none &none &none &none &none &none &kp LC(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT 
-                &none &none &none &none &none &none &none &none &kp LALT(LGUI(LEFT) &kp LALT(LGUI(DOWN) &kp LALT(LGUI(UP) &kp LALT(LGUI(RGHT) 
-                &none &none &none &none &none &none &none &none &none &none &none &none
+                &kp LC(LEFT) &none &none &none &none &none &none &none &none &none &none &none
+                &kp HOME &none &none &none &none &none &none &none &none &none &none &none
+                &kp LA(LG(LEFT) &none &none &none &none &none &none &none &none &none &none &none
+                &kp LALT(LGUI(LEFT) &none &none &none &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
         };
