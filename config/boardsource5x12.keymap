@@ -27,13 +27,13 @@
         compatible = "zmk,combos";
         esc_combo {
             //combo-keys = <&kp F &kp G>;
-            key-positions = <16 17>;
+            key-positions = <15 16>;
             layers = <0>;
             bindings = <&kp ESC>;
-        };
+        };w
         colon_combo {
             //combo-keys = <&kp H &kp J>;
-            key-positions = <20 21>;
+            key-positions = <21 22>;
             layers = <0>;
             bindings = <&kp SCLN>;
         };
@@ -48,15 +48,15 @@
         base_layer_toggle_combo {
             //combo-keys = <&kp Q &kp W &kp E>;
             key-positions = <1 2 3>;
-            layers = <3>;
+            //layers = <3>;
             bindings = <&tog 0>;
         };
-        layer4_to_base_combo {
+        //layer4_to_base_combo {
             //combo-keys = <&kp F1 &kp F2 &kp F3>;
-            key-positions = <14 15 16>;
-            layers = <4>;
-            bindings = <&tog 0>;
-        };
+         //   key-positions = <14 15 16>;
+         //   layers = <4>;
+         /   bindings = <&tog 0>;
+       // };
 
         base_to_layer4_combo {
             //combo-keys = <&kp S &kp D &kp F>;
