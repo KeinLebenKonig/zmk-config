@@ -39,23 +39,23 @@
         gaming_layer_toggle_combo {
             combo-keys = <&kp W &kp E &kp R>;
             layers = <0>;
-            bindings = <&tog L3>;
+            bindings = <&tog 3>;
         };
 
         base_layer_toggle_combo {
             combo-keys = <&kp Q &kp W &kp E>;
             layers = <3>;
-            bindings = <&tog L0>;
+            bindings = <&tog 0>;
         };
         layer4_to_base_combo {
         combo-keys = <&kp F1 &kp F2 &kp F3>;
             on-layer = <4>;
-            bindings = <&tog L0>;
+            bindings = <&tog 0>;
         };
 
         base_to_layer4_combo {
             combo-keys = <&kp S &kp D &kp F>;
-            bindings = <&tog L4>;
+            bindings = <&tog 4>;
         };
     };
 
