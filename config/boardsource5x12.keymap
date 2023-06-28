@@ -21,94 +21,137 @@
                 <&kp>,
                 <&kp>;
         };
-        
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&none>, <&tog 3>;
-        }; 
-        
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&none>, <&none>, <&tog 5>;
+    };
+
+        combos {
+        compatible = "zmk,combos";
+        esc_combo {
+            combo-keys = <&kp F &kp G>;
+            layers = <0>;
+            bindings = <&kp ESC>;
+        };
+        colon_combo {
+            combo-keys = <&kp H &kp J>;
+            layers = <0>;
+            bindings = <&kp SCLN>;
+        };
+
+        gaming_layer_toggle_combo {
+            combo-keys = <&kp W &kp E &kp R>;
+            layers = <0>;
+            bindings = <&tog L3>;
+        };
+
+        base_layer_toggle_combo {
+            combo-keys = <&kp Q &kp W &kp E>;
+            layers = <3>;
+            bindings = <&tog L0>;
+        };
+        layer4_to_base_combo {
+        combo-keys = <&kp F1 &kp F2 &kp F3>;
+            on-layer = <4>;
+            bindings = <&tog L0>;
+        };
+
+        base_to_layer4_combo {
+            combo-keys = <&kp S &kp D &kp F>;
+            bindings = <&tog L4>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
-
-        layer0 {
+        
+        layer0 {  //Base Layer
+        // Base Layer
+        // -----------------------------------------------------------------------------------------------------------------------------------
+        // |    Q     |    W     |    E     |    R     |    T     |  BLANK  |  BLANK  |    Y     |    U     |    I     |    O     |    P     |
+        // |    A     | S/CTRL   | D/ALT    | F/GUI    |    G     |  BLANK  |  BLANK  |    H     | J/GUI    | K/ALT    | L/CTRL   |    ;     |
+        // |    Z     |    X     |    C     |    V     |    B     |  BLANK  |  BLANK  |    N     |    M     |    ,     |    .     |    /     |
+        // |  BLANK   |  BLANK   |  BLANK   |  Layer1  |  BSPC    |  SHIFT  |  ENTER  |  SPACE   |  Layer2  |  BLANK   |  BLANK   |  BLANK   |
+        // |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK  |  BLANK  |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |
+        // -----------------------------------------------------------------------------------------------------------------------------------
             bindings = <
                 &kp Q &kp W &kp E &kp R &kp T &td0 &td1 &kp Y &kp U &kp I &kp O &kp P
                 &kp A &hm LCTRL S &hm LALT D &hm LGUI F &kp G &kp ESCAPE &kp COLON &kp H &hm LGUI J &hm LALT K &hm LCTRL L &kp SEMI
                 &kp Z &kp X &kp C &kp V &kp B &kp TAB &kp APOS &kp N &kp M &kp COMMA &kp DOT &kp SLASH
-                &none &none &none &mo 4 &kp BACKSPACE &kp LEFT_SHIFT &kp ENTER &kp SPACE &mo 1 &none &none &none
+                &none &none &none &mo 1 &kp BACKSPACE &kp LEFT_SHIFT &kp ENTER &kp SPACE &mo 2 &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
         };
 
         layer1 {
+        // Symbols
+        // -----------------------------------------------------------------------------------------------------------------------------------
+        // |    <     |    >     |    [     |    ]     |    `     |  BLANK  |  BLANK  |    ^     |    '     |    "     |    ?     |    /     |
+        // |    $     |    +     |    (     |    )     |    @     |  BLANK  |  BLANK  |  PIPE    |    -     |    =     |    _     |    *     |
+        // |    !     |    #     |    {     |    }     |    ~     |  BLANK  |  BLANK  |    &     |    ;     |    :     |    %     |    \     |
+        // |  BLANK   |  BLANK   |  BLANK   |  Layer1  |  BSPC    |   DEL   |  ENTER  |  SPACE   |  Layer2  |  BLANK   |  BLANK   |  BLANK   |
+        // |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK  |  BLANK  |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |
+        // -----------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &none &none &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-                &kp DOLLAR &kp PLUS &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp AT_SIGN &none &kp GRAVE &kp PIPE &kp MINUS &kp EQUAL &kp UNDERSCORE &kp ASTERISK
-                &kp EXCL &kp HASH &kp LEFT_BRACE &kp RIGHT_BRACE &kp TILDE &none &kp BSLH &kp AMPERSAND &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PERCENT &kp CARET
-                &none &none &none &mo 2 &kp DELETE &none &none &none &trans &none &none &none
+                &kp LT &kp GT &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp GRAVE &none &none &kp CARET &kp APOSTROPHE &kp DOUBLE_QUOTE &kp QUESTION &kp SLASH
+                &kp DOLLAR &kp PLUS &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp AT_SIGN &none &none &kp PIPE &kp MINUS &kp EQUAL &kp UNDERSCORE &kp ASTERISK
+                &kp EXCL &kp HASH &kp LEFT_BRACE &kp RIGHT_BRACE &kp TILDE &none &none &kp AMPERSAND &kp SEMICOLON &kp COLON &kp PERCENT &kp BSLH
+                &none &none &none &trans &kp BACKSPACE &kp DELETE &kp TAB &kp SPACE &trans &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
         };
+
 
         layer2 {
+        // Numpad + NAV
+        // -------------------------------------------------------------------------------------------------------------------------------------
+        // |  BLANK   |    7     |    8     |    9     |    .     |  BLANK  |  BLANK  |  PGUP    | CTRL+LEFT |  HOME    |   END    | CTRL+RIGHT |
+        // |  BLANK   |    4     |    5     |    6     |    0     |  BLANK  |  BLANK  | CTRL+UP  |  LEFT     |  DOWN    |   UP     |  RIGHT     |
+        // |  BLANK   |    1     |    2     |    3     |  BLANK   |  BLANK  |  BLANK  |  PGDN    | A+G+LEFT  | A+G+DOWN |  A+G+UP  | A+G+RIGHT  |
+        // |  BLANK   |  BLANK   |  BLANK   |  Layer1  |  BLANK   |  BLANK  |  BLANK  |  BLANK   |  Layer2   |  BLANK   |   BLANK  |  BLANK     |
+        // -------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-                &none &none &none &none &none &none &none &none &kp N7 &kp N8 &kp N9 &none
-                &none &none &none &none &none &none &none &kp N0 &kp N4 &kp N5 &kp N6 &kp DOT
-                &none &none &none &none &none &none &none &none &kp N1 &kp N2 &kp N3 &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &kp N7 &kp N8 &kp N9 &kp DOT &none &none &kp PG_UP &kp LC(LEFT) &kp HOME &kp END &kp LC(RIGHT)
+                &none &kp N4 &kp N5 &kp N6 &kp N0 &none &none &kp LC(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT
+                &none &kp N1 &kp N2 &kp N3 &none &none &none &kp PG_DN &kp LA(LG(LEFT)) &kp LA(LG(DOWN)) &kp LA(LG(UP)) &kp LA(LG(RIGHT))
+                &none &none &none &trans &none &none &none &none &trans &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
         };
+
 
         layer3 {
+        // Gaming
+        // -------------------------------------------------------------------------------------------------
+        // |  ESC  |   Q   |   W   |   E   |   R   | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
+        // | SHIFT |   A   |   S   |   D   |   F   | BLANK | BLANK | BLANK | BLANK | BLANK | RESET | BLANK |
+        // | LCTRL |   Z   |   X   |   C   |   V   | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
+        // | BLANK | BLANK | BLANK | BLANK | SPACE |   `   | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
+        // | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
+        // -------------------------------------------------------------------------------------------------
             bindings = <
-                &kp ESCAPE &kp Q &kp W &kp E &kp R &trans &none &none &none &none &none &none
-                &kp LEFT_SHIFT &kp A &kp S &kp D &kp F &kp TAB &none &none &none &none &none &none
-                &kp LEFT_CONTROL &kp Z &kp X &kp C &kp V &kp B &none &none &none &none &none &none
-                &none &none &none &sl 6 &kp SPACE &kp LA(TAB) &none &none &none &none &none &none
+                &kp ESC  &kp Q &kp W &kp E &kp R &none &none &none &none &none &none &none
+                &kp LSFT &kp A &kp S &kp D &kp F &none &none &none &none &none &bootloader &none
+                &kp LCTRL &kp Z &kp X &kp C &kp V &none &none &none &none &none &none &none
+                &none &none &none &none &kp SPACE &kp GRAVE &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
             >;
         };
+
+
 
         layer4 {
+        // OSRS
+        // -------------------------------------------------------------------------------------------------
+        // |   4   |   3   |   2   |   1   | BLANK | BLANK | BLANK |   .   |   7   |   8   |   9   | BLANK |
+        // |  F4   |  F3   |  F2   |  F1   | ESC   | BLANK | BLANK |   0   |   4   |   5   |   6   | BLANK |
+        // | BLANK | BLANK | BLANK |  F5   | BLANK | BLANK | BLANK | BLANK |  1   |   2   |   3    | BLANK |
+        // | BLANK | BLANK | BLANK | BLANK | SPACE | ENTER | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
+        // | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
+        // -------------------------------------------------------------------------------------------------
             bindings = <
-                &none &none &none &none &none &none &none &none &kp LC(LEFT) &kp HOME &kp END &kp LC(RIGHT)
-                &none &none &none &none &none &none &none &kp LC(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &none &none &none &none &none &none &none &none &kp LA(LG(LEFT)) &kp LA(LG(DOWN)) &kp LA(LG(UP)) &kp LA(LG(RIGHT))
-                &none &none &none &trans &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-            >;
-        };
-
-        layer5 {
-            bindings = <
-                &none &none &none &none &none &none &trans &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-            >;
-        };
-
-        layer6 {
-            bindings = <
-                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &none &none &none &none &none &none &none
-                &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
+                &kp FOUR &kp THREE &kp TWO &kp ONE &none &none &none &kp DOT &kp SEVEN &kp EIGHT &kp NINE &none
+                &kp F4 &kp F3 &kp F2 &kp F1 &kp ESC &none &none &kp ZERO &kp FOUR &kp FIVE &kp SIX &none
+                &none &none &none &kp F5 &none &none &none &none &kp ONE &kp TWO &kp THREE &none
+                &none &none &none &none &kp SPACE &kp ENTER &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none
             >;
         };
     };
