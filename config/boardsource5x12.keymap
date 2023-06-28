@@ -96,8 +96,8 @@
         // |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK  |  BLANK  |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |
         // -----------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-                &kp LT &kp GT &kp LEFT_BRACKET &kp RIGHT_BRACKET &none &none &none &none &none &none &none &none
-                //&kp GRAVE &none &none &kp CARET &kp SINGLE_QUOTE &kp DOUBLE_QUOTE &kp QMARK &kp FSLH
+                &kp LT &kp GT &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp GRAVE &none &none &kp CARET &none &none &none &none
+                // &kp SINGLE_QUOTE &kp DOUBLE_QUOTE &kp QMARK &kp FSLH
                 &kp DOLLAR &kp PLUS &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp AT_SIGN &none &none &kp PIPE &kp MINUS &kp EQUAL &kp UNDERSCORE &kp ASTERISK
                 &kp EXCL &kp HASH &kp LEFT_BRACE &kp RIGHT_BRACE &kp TILDE &none &none &kp AMPERSAND &kp SEMICOLON &kp COLON &kp PERCENT &kp BSLH
                 &none &none &none &trans &kp BACKSPACE &kp DELETE &kp TAB &kp SPACE &trans &none &none &none
