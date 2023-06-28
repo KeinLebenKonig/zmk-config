@@ -30,7 +30,7 @@
             key-positions = <15 16>;
             layers = <0>;
             bindings = <&kp ESC>;
-        };w
+        };
         colon_combo {
             //combo-keys = <&kp H &kp J>;
             key-positions = <21 22>;
