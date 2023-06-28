@@ -26,35 +26,41 @@
         combos {
         compatible = "zmk,combos";
         esc_combo {
-            combo-keys = <&kp F &kp G>;
+            //combo-keys = <&kp F &kp G>;
+            key-positions = <16 17>;
             layers = <0>;
             bindings = <&kp ESC>;
         };
         colon_combo {
-            combo-keys = <&kp H &kp J>;
+            //combo-keys = <&kp H &kp J>;
+            key-positions = <20 21>;
             layers = <0>;
             bindings = <&kp SCLN>;
         };
 
         gaming_layer_toggle_combo {
-            combo-keys = <&kp W &kp E &kp R>;
+            //combo-keys = <&kp W &kp E &kp R>;
+            key-positions = <1 2 3>;
             layers = <0>;
             bindings = <&tog 3>;
         };
 
         base_layer_toggle_combo {
-            combo-keys = <&kp Q &kp W &kp E>;
+            //combo-keys = <&kp Q &kp W &kp E>;
+            key-positions = <1 2 3>;
             layers = <3>;
             bindings = <&tog 0>;
         };
         layer4_to_base_combo {
-        combo-keys = <&kp F1 &kp F2 &kp F3>;
+            //combo-keys = <&kp F1 &kp F2 &kp F3>;
+            key-positions = <14 15 16>;
             on-layer = <4>;
             bindings = <&tog 0>;
         };
 
         base_to_layer4_combo {
-            combo-keys = <&kp S &kp D &kp F>;
+            //combo-keys = <&kp S &kp D &kp F>;
+            key-positions = <14 15 16>;
             bindings = <&tog 4>;
         };
     };
