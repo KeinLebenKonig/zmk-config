@@ -33,9 +33,9 @@
         };
         colon_combo {
             //combo-keys = <&kp H &kp J>;
-            key-positions = <21 22>;
+            key-positions = <20 21>;
             layers = <0>;
-            bindings = <&kp SCLN>;
+            bindings = <&kp COLN>;
         };
 
         gaming_layer_toggle_combo {
