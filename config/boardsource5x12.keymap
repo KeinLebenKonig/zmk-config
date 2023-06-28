@@ -148,10 +148,9 @@
         // | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
         // -------------------------------------------------------------------------------------------------
             bindings = <
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                //&kp FOUR &kp THREE &kp TWO &kp ONE &none &none &none &kp DOT &kp SEVEN &kp EIGHT &kp NINE &none
-                &kp F4 &kp F3 &kp F2 &kp F1 &kp ESC &none &none &kp ZERO &kp FOUR &kp FIVE &kp SIX &none
-                &none &none &none &kp F5 &none &none &none &none &kp ONE &kp TWO &kp THREE &none
+                &kp N4 &kp N3 &kp N2 &kp N1 &none &none &none &kp DOT &kp N7 &kp N8 &kp N9 &none
+                &kp F4 &kp F3 &kp F2 &kp F1 &kp ESC &none &none &kp N0 &kp N4 &kp N5 &kp N6 &none
+                &none &none &none &kp F5 &none &none &none &none &kp N1 &kp N2 &kp N3 &none
                 &none &none &none &none &kp SPACE &kp ENTER &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none
             >;
