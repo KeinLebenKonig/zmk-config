@@ -33,7 +33,7 @@
         };
         colon_combo {
             //combo-keys = <&kp H &kp J>;
-            key-positions = <20 21>;
+            key-positions = <19 20>;
             layers = <0>;
             bindings = <&kp COLN>;
         };
@@ -41,7 +41,7 @@
         gaming_layer_toggle_combo {
             //combo-keys = <&kp W &kp E &kp R>;
             key-positions = <1 2 3>;
-            layers = <0>;
+           // layers = <0>;
             bindings = <&tog 3>;
         };
 
@@ -60,7 +60,7 @@
 
         base_to_layer4_combo {
             //combo-keys = <&kp S &kp D &kp F>;
-            key-positions = <14 15 16>;
+            key-positions = <13 14 15>;
             bindings = <&tog 4>;
         };
     };
