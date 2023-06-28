@@ -54,7 +54,7 @@
         layer4_to_base_combo {
             //combo-keys = <&kp F1 &kp F2 &kp F3>;
             key-positions = <14 15 16>;
-            layer = <4>;
+            layers = <4>;
             bindings = <&tog 0>;
         };
 
