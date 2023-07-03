@@ -37,7 +37,18 @@
             layers = <0>;
             bindings = <&kp COLN>;
         };
-
+        tab_combo {
+            //combo-keys = <&kp F &kp G>;
+            key-positions = <42 43>;
+            layers = <0>;
+            bindings = <&kp TAB>;
+        };
+        del_combo {
+            //combo-keys = <&kp H &kp J>;
+            key-positions = <40 41>;
+            layers = <0>;
+            bindings = <&kp DEL>;
+        };
         gaming_layer_toggle_combo {
             //combo-keys = <&kp W &kp E &kp R>;
             key-positions = <1 2 3>;
