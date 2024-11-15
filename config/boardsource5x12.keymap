@@ -159,15 +159,15 @@
         // -------------------------------------------------------------------------------------------------
         // |   4   |   3   |   2   |   1   | BLANK | BLANK | BLANK |   .   |   7   |   8   |   9   | BLANK |
         // |  F4   |  F3   |  F2   |  F1   | ESC   | BLANK | BLANK |   0   |   4   |   5   |   6   | BLANK |
-        // | BLANK | BLANK | BLANK |  F5   | BLANK | BLANK | BLANK | BLANK |  1   |   2   |   3    | BLANK |
-        // | BLANK | BLANK | BLANK | BLANK | SPACE | ENTER | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
+        // | BLANK | BLANK | BLANK |  F5   | BLANK | BLANK | BLANK | BLANK |   1   |   2   |   3   | BLANK |
+        // | BLANK | BLANK | BLANK | SPACE | LCTRL | SHIFT | BLANK | BLANK | ENTER | BLANK | BLANK | BLANK |
         // | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
         // -------------------------------------------------------------------------------------------------
             bindings = <
                 &kp N4 &kp N3 &kp N2 &kp N1 &none &none &none &kp DOT &kp N7 &kp N8 &kp N9 &none
                 &kp F4 &kp F3 &kp F2 &kp F1 &kp ESC &none &none &kp N0 &kp N4 &kp N5 &kp N6 &none
                 &none &none &none &kp F5 &none &none &none &none &kp N1 &kp N2 &kp N3 &none
-                &none &none &none &none &kp SPACE &kp ENTER &none &none &none &none &none &none
+                &none &none &none &kp SPACE &kp LCTRL &kp LEFT_SHIFT &none &kp ENTER &none &none &none &none
                 &none &none &none &none &none &none &none &none &none
             >;
         };
