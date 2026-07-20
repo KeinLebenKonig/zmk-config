@@ -3,172 +3,25 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
-        };
-    };
-
-        combos {
-        compatible = "zmk,combos";
-        esc_combo {
-            //combo-keys = <&kp F &kp G>;
-            key-positions = <15 16>;
-            layers = <0>;
-            bindings = <&kp ESC>;
-        };
-        colon_combo {
-            //combo-keys = <&kp H &kp J>;
-            key-positions = <19 20>;
-            layers = <0>;
-            bindings = <&kp COLN>;
-        };
-        tab_combo {
-            //combo-keys = <&kp F &kp G>;
-            key-positions = <42 43>;
-            layers = <0>;
-            bindings = <&kp TAB>;
-        };
-        del_combo {
-            //combo-keys = <&kp H &kp J>;
-            key-positions = <40 41>;
-            layers = <0>;
-            bindings = <&kp DEL>;
-        };
-        gaming_layer_toggle_combo {
-            //combo-keys = <&kp W &kp E &kp R>;
-            key-positions = <1 2 3>;
-           // layers = <0>;
-            bindings = <&tog 3>;
-        };
-
-        base_layer_toggle_combo {
-            //combo-keys = <&kp Q &kp W &kp E>;
-            key-positions = <1 2 3>;
-            //layers = <3>;
-            bindings = <&tog 0>;
-        };
-        //layer4_to_base_combo {
-            //combo-keys = <&kp F1 &kp F2 &kp F3>;
-         //   key-positions = <14 15 16>;
-         //   layers = <4>;
-         //   bindings = <&tog 0>;
-       // };
-
-        base_to_layer4_combo {
-            //combo-keys = <&kp S &kp D &kp F>;
-            key-positions = <13 14 15>;
-            bindings = <&tog 4>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
         
-        layer0 {  
-        // Base Layer
+        default_layer {  
         // -----------------------------------------------------------------------------------------------------------------------------------
-        // |    Q     |    W     |    E     |    R     |    T     |  BLANK  |  BLANK  |    Y     |    U     |    I     |    O     |    P     |
-        // |    A     | S/CTRL   | D/ALT    | F/GUI    |    G     |  BLANK  |  BLANK  |    H     | J/GUI    | K/ALT    | L/CTRL   |    ;     |
-        // |    Z     |    X     |    C     |    V     |    B     |  BLANK  |  BLANK  |    N     |    M     |    ,     |    .     |    /     |
-        // |  BLANK   |  BLANK   |  BLANK   |  Layer1  |  BSPC    |  SHIFT  |  ENTER  |  SPACE   |  Layer2  |  BLANK   |  BLANK   |  BLANK   |
-        // |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK  |  BLANK  |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |
+        // |  none   |   none   |   none   |   none   |   none   |  ESC    |  TAB    |  none   |  none    |  none    |  none    |  none    |
+        // |  none   |   LEFT   |   DOWN   |  RIGHT   |   none   |  ENTER  |  none   |  none   |  LIGHT   |  MEDIUM  |  HEAVY   |  GUARD   |
+        // |  none   |   none   |   none   |   none   |   none   |  none   |  none   |  none   |  UNIQUE  |  SKILL   |  THROW   |  DASH    |
+        // |  none   |   none   |   none   |   none   |   UP     |  none   |  none   |  none   |   UP     |   none   |   none   |   none   |
         // -----------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-                &kp Q &kp W &kp E &kp R &kp T &none &none &kp Y &kp U &kp I &kp O &kp P
-                &kp A &hm LCTRL S &hm LALT D &hm LGUI F &kp G &none &none &kp H &hm LGUI J &hm LALT K &hm LCTRL L &kp SEMI
-                &kp Z &kp X &kp C &kp V &kp B &none &none &kp N &kp M &kp COMMA &kp DOT &kp SLASH
-                &none &none &none &mo 1 &kp BACKSPACE &kp LEFT_SHIFT &kp ENTER &kp SPACE &mo 2 &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-            >;
-        };
-
-        layer1 {
-        // Symbols
-        // -----------------------------------------------------------------------------------------------------------------------------------
-        // |    <     |    >     |    [     |    ]     |    `     |  BLANK  |  BLANK  |    ^     |    '     |    "     |    ?     |    /     |
-        // |    $     |    +     |    (     |    )     |    @     |  BLANK  |  BLANK  |  PIPE    |    -     |    =     |    _     |    *     |
-        // |    !     |    #     |    {     |    }     |    ~     |  BLANK  |  BLANK  |    &     |    ;     |    :     |    %     |    \     |
-        // |  BLANK   |  BLANK   |  BLANK   |  Layer1  |  BSPC    |   DEL   |  ENTER  |  SPACE   |  Layer2  |  BLANK   |  BLANK   |  BLANK   |
-        // |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK  |  BLANK  |  BLANK   |  BLANK   |  BLANK   |  BLANK   |  BLANK   |
-        // -----------------------------------------------------------------------------------------------------------------------------------
-            bindings = <
-                &kp LT &kp GT &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp GRAVE &none &none &kp CARET &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &kp QMARK &kp FSLH
-                &kp DOLLAR &kp PLUS &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp AT_SIGN &none &none &kp PIPE &kp MINUS &kp EQUAL &kp UNDERSCORE &kp ASTERISK
-                &kp EXCL &kp HASH &kp LEFT_BRACE &kp RIGHT_BRACE &kp TILDE &none &none &kp AMPERSAND &kp SEMICOLON &kp COLON &kp PERCENT &kp BSLH
-                &none &none &none &trans &kp BACKSPACE &kp DELETE &kp TAB &kp SPACE &trans &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-            >;
-        };
-
-
-        layer2 {
-        // Numpad + NAV
-        // -------------------------------------------------------------------------------------------------------------------------------------
-        // |  BLANK   |    7     |    8     |    9     |    .     |  BLANK  |  BLANK  |  PGUP    | CTRL+LEFT |  HOME    |   END    | CTRL+RIGHT |
-        // |  BLANK   |    4     |    5     |    6     |    0     |  BLANK  |  BLANK  | CTRL+UP  |  LEFT     |  DOWN    |   UP     |  RIGHT     |
-        // |  BLANK   |    1     |    2     |    3     |  BLANK   |  BLANK  |  BLANK  |  PGDN    | A+G+LEFT  | A+G+DOWN |  A+G+UP  | A+G+RIGHT  |
-        // |  BLANK   |  BLANK   |  BLANK   |  Layer1  |  BLANK   |  BLANK  |  BLANK  |  BLANK   |  Layer2   |  BLANK   |   BLANK  |  BLANK     |
-        // -------------------------------------------------------------------------------------------------------------------------------------
-            bindings = <
-                &none &kp N7 &kp N8 &kp N9 &kp DOT &none &none &kp PG_UP &kp LC(LEFT) &kp HOME &kp END &kp LC(RIGHT)
-                &none &kp N4 &kp N5 &kp N6 &kp N0 &none &none &kp LC(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT
-                &none &kp N1 &kp N2 &kp N3 &none &none &none &kp PG_DN &kp LA(LG(LEFT)) &kp LA(LG(DOWN)) &kp LA(LG(UP)) &kp LA(LG(RIGHT))
-                &none &none &none &trans &none &none &none &none &trans &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-            >;
-        };
-
-
-        layer3 {
-        // Gaming
-        // -------------------------------------------------------------------------------------------------
-        // |  ESC  |   Q   |   W   |   E   |   R   | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
-        // | SHIFT |   A   |   S   |   D   |   F   | BLANK | BLANK | BLANK | BLANK | BLANK | RESET | BLANK |
-        // | LCTRL |   Z   |   X   |   C   |   V   | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
-        // | BLANK | BLANK | BLANK | BLANK | SPACE |   `   | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
-        // | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
-        // -------------------------------------------------------------------------------------------------
-            bindings = <
-                &kp ESC  &kp Q &kp W &kp E &kp R &none &none &none &none &none &none &none
-                &kp LSFT &kp A &kp S &kp D &kp F &none &none &none &none &none &bootloader &none
-                &kp LCTRL &kp Z &kp X &kp C &kp V &none &none &none &none &none &none &none
-                &none &none &none &none &kp SPACE &kp GRAVE &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-            >;
-        };
-
-
-
-        layer4 {
-        // OSRS
-        // -------------------------------------------------------------------------------------------------
-        // |   4   |   3   |   2   |   1   | BLANK | BLANK | BLANK |   .   |   7   |   8   |   9   | BLANK |
-        // |  F4   |  F3   |  F2   |  F1   | ESC   | BLANK | BLANK |   0   |   4   |   5   |   6   | BLANK |
-        // | BLANK | BLANK | BLANK |  F5   | BLANK | BLANK | BLANK | BLANK |   1   |   2   |   3   | BLANK |
-        // | BLANK | BLANK | BLANK | SPACE | LCTRL | SHIFT | BLANK | BLANK | ENTER | BLANK | BLANK | BLANK |
-        // | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK | BLANK |
-        // -------------------------------------------------------------------------------------------------
-            bindings = <
-                &kp N4 &kp N3 &kp N2 &kp N1 &none &none &none &kp DOT &kp N7 &kp N8 &kp N9 &none
-                &kp F4 &kp F3 &kp F2 &kp F1 &kp ESC &none &none &kp N0 &kp N4 &kp N5 &kp N6 &none
-                &none &none &none &kp F5 &none &none &none &none &kp N1 &kp N2 &kp N3 &none
-                &none &none &none &kp SPACE &kp LCTRL &kp LEFT_SHIFT &none &kp ENTER &none &none &none &none
-                &none &none &none &none &none &none &none &none &none
+                &none    &none    &none    &none    &none     &kp ESC   &kp TAB   &none    &none     &none     &none     &none
+                &none    &kp A    &kp S    &kp D    &none     &kp ENTER &none     &none    &kp U     &kp I     &kp O     &kp P
+                &none    &none    &none    &none    &none     &none     &none     &none    &kp J     &kp K     &kp L     &kp SEMI
+                &none    &none    &none    &none    &kp SPACE &none     &none     &none    &kp SPACE &none     &none     &none
             >;
         };
     };
