@@ -11,19 +11,23 @@
         compatible = "zmk,keymap";
         
         default_layer {  
-        // -----------------------------------------------------------------------------------------------------------------------------------
-        // |  none   |   none   |   none   |   none   |   none   |  ESC    |  TAB    |  none   |  none    |  none    |  none    |  none    |
-        // |  none   |   LEFT   |   DOWN   |  RIGHT   |   none   |  ENTER  |  none   |  none   |  LIGHT   |  MEDIUM  |  HEAVY   |  GUARD   |
-        // |  none   |   none   |   none   |   none   |   none   |  none   |  none   |  none   |  UNIQUE  |  SKILL   |  THROW   |  DASH    |
-        // |  none   |   none   |   none   |   none   |   UP     |  none   |  none   |  none   |   UP     |   none   |   none   |   none   |
-        // -----------------------------------------------------------------------------------------------------------------------------------
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        // |         |          |          |          |          |  ESC    |  TAB    |         |          |          |          |          |
+        // |         |   LEFT   |   DOWN   |  RIGHT   |          |  ENTER  |         |         |  LIGHT   |  MEDIUM  |  THROW   |  SKILL   |
+        // |         |          |          |          |          |         |         |         |  UNIQUE  |  HEAVY   |   DASH   |  BLOCK   |
+        // |         |          |          |          |    UP    |         |         |         |          |          |          |          |
+        // ---------------------------------------------------------------------------------------------------------------------------------
             bindings = <
                 &none    &none    &none    &none    &none     &kp ESC   &kp TAB   &none    &none     &none     &none     &none
                 &none    &kp A    &kp S    &kp D    &none     &kp ENTER &none     &none    &kp U     &kp I     &kp O     &kp P
                 &none    &none    &none    &none    &none     &none     &none     &none    &kp J     &kp K     &kp L     &kp SEMI
-                &none    &none    &none    &none    &kp SPACE &none     &none     &none    &kp SPACE &none     &none     &none
+                &none    &none    &none    &none    &kp W     &none     &none     &none    &none     &none     &none     &none
                 &none    &none    &none    &none    &none     &none     &none     &none    &none     &none     &none     &none
             >;
         };
     };
 };
+
+
+
+
